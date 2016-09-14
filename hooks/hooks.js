@@ -24,7 +24,7 @@ var hooks = {
     return html
   },
   beforePreview: function (html, req, res, next, abe) {
-    /*var regexIncludeVirtual = /<!--#include(.*?)-->/g
+    var regexIncludeVirtual = /<!--#include(.*?)-->/g
     var match
     while (match = regexIncludeVirtual.exec(html)) {
       var url = /(virtual|VIRTUAL)=['|"](.*?)['|"]/.exec(match[1])
@@ -44,7 +44,7 @@ var hooks = {
       }else {
         html = html.replace(match[0], '')
       }
-    }*/
+    }
     return html
   }
 };
