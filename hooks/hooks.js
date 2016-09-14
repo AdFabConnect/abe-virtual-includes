@@ -39,7 +39,7 @@ var hooks = {
           var includeHtml = abe.fileUtils.getFileContent(urlToOpenCustom)
           html = html.replace(match[0], includeHtml)
         }else {
-          console.log(abe.clc.red(`[ WARNING ] file virtual include doesn't exist`), file)
+          console.log(abe.clc.red(`[ WARNING ] file virtual include doesn't exist`), urlToOpen)
         }
       }else {
         html = html.replace(match[0], '')
