@@ -12,11 +12,11 @@ var hooks = {
         && typeof url[2] !== 'undefined' && url[2] !== null) {
         var urlToOpen = path.join(abe.config.root, abe.config.publish.url, url[2])
         var urlToOpenCustom = path.join(abe.config.root, 'custom', url[2])
-        if (abe.fileUtils.isFile(urlToOpen)) {
-          var includeHtml = abe.fileUtils.getFileContent(urlToOpen)
+        if (abe.coreUtils.file.exist(urlToOpen)) {
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpen)
           html = html.replace(match[0], includeHtml)
-        }else if (abe.fileUtils.isFile(urlToOpenCustom)) {
-          var includeHtml = abe.fileUtils.getFileContent(urlToOpenCustom)
+        }else if (abe.coreUtils.file.exist(urlToOpenCustom)) {
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpenCustom)
           html = html.replace(match[0], includeHtml)
         }
       }else {
@@ -34,11 +34,11 @@ var hooks = {
         && typeof url[2] !== 'undefined' && url[2] !== null) {
         var urlToOpen = path.join(abe.config.root, abe.config.publish.url, url[2])
         var urlToOpenCustom = path.join(abe.config.root, 'custom', url[2])
-        if (abe.fileUtils.isFile(urlToOpen)) {
-          var includeHtml = abe.fileUtils.getFileContent(urlToOpen)
+        if (abe.coreUtils.file.exist(urlToOpen)) {
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpen)
           html = html.replace(match[0], includeHtml)
-        }else if (abe.fileUtils.isFile(urlToOpenCustom)) {
-          var includeHtml = abe.fileUtils.getFileContent(urlToOpenCustom)
+        }else if (abe.coreUtils.file.exist(urlToOpenCustom)) {
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpenCustom)
           html = html.replace(match[0], includeHtml)
         }else {
           console.log(abe.clc.red(`[ WARNING ] file virtual include doesn't exist`), urlToOpen)
