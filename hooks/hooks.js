@@ -13,10 +13,10 @@ var hooks = {
         var urlToOpen = path.join(abe.config.root, abe.config.publish.url, url[2])
         var urlToOpenCustom = path.join(abe.config.root, 'custom', url[2])
         if (abe.coreUtils.file.exist(urlToOpen)) {
-          var includeHtml = abe.cmsData.file.get(urlToOpen)
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpen)
           html = html.replace(match[0], includeHtml)
         }else if (abe.coreUtils.file.exist(urlToOpenCustom)) {
-          var includeHtml = abe.cmsData.file.get(urlToOpenCustom)
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpenCustom)
           html = html.replace(match[0], includeHtml)
         }
       }else {
@@ -35,10 +35,10 @@ var hooks = {
         var urlToOpen = path.join(abe.config.root, abe.config.publish.url, url[2])
         var urlToOpenCustom = path.join(abe.config.root, 'custom', url[2])
         if (abe.coreUtils.file.exist(urlToOpen)) {
-          var includeHtml = abe.cmsData.file.get(urlToOpen)
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpen)
           html = html.replace(match[0], includeHtml)
         }else if (abe.coreUtils.file.exist(urlToOpenCustom)) {
-          var includeHtml = abe.cmsData.file.get(urlToOpenCustom)
+          var includeHtml = abe.coreUtils.file.getContent(urlToOpenCustom)
           html = html.replace(match[0], includeHtml)
         }else {
           console.log(abe.clc.red(`[ WARNING ] file virtual include doesn't exist`), urlToOpen)
