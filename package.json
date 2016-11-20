@@ -1,0 +1,26 @@
+{
+  "name": "abe-virtual-includes",
+  "version": "1.0.0",
+  "description": "replace virtual includes in templates with local html files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdFabConnect/abe-virtualIncludes.git"
+  },
+  "keywords": [
+    "abe",
+    "cms",
+    "plugin",
+    "virtual",
+    "includes"
+  ],
+  "author": "Nicolas Labbé",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdFabConnect/abe-virtualIncludes/issues"
+  },
+  "homepage": "https://github.com/AdFabConnect/abe-virtualIncludes#readme"
+}
